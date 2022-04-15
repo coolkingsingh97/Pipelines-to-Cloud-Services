@@ -34,6 +34,7 @@ b_stream = BinLogStreamReader(
 
 order_events = []
 
+
 for binlogevent in b_stream:
     for row in binlogevent.rows:
         if binlogevent.table == 'Orders':
@@ -59,6 +60,7 @@ for binlogevent in b_stream:
 
 b_stream.close()
 
+ 
 
 keys = order_events[0].keys()
 local_filename = 'order_extract.csv'

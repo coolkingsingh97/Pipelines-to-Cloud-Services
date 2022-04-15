@@ -30,4 +30,5 @@ b_stream = BinLogStreamReader(
 for event in b_stream:
     event.dump()
 
+
 b_stream.close()
